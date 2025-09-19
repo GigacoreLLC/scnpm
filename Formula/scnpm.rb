@@ -9,7 +9,13 @@ class Scnpm < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "./main.go"
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.commit=#{version}
+      -X main.date=#{Time.now.utc.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags: ldflags), "."
   end
 
   test do
