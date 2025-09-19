@@ -2,7 +2,7 @@ class Scnpm < Formula
   desc "Security scanner for malware-affected npm packages"
   homepage "https://github.com/GigacoreLLC/scnpm"
   url "https://github.com/GigacoreLLC/scnpm/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "REPLACE_WITH_ACTUAL_SHA256"
+  sha256 "b8af19cf21efdf416ef6ddfe116ac791efc789b53820611f63a17bfd1835fa2b"
   license "MIT"
   head "https://github.com/GigacoreLLC/scnpm.git", branch: "main"
 
